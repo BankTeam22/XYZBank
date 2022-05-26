@@ -1,0 +1,16 @@
+.DS_Store
+target/*
+.classpath
+.project
+.settings/
+out/
+test-output/
+*.iml
+.idea/*
+doc/
+*.zip
+*-results.xml
+*.log
+*.txt
+*-all.xml
+allure-report/*
