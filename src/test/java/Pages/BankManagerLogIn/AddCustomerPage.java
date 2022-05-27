@@ -38,6 +38,6 @@ public class AddCustomerPage extends WebCommands {
         return isWebElementDisplayed(openAccountMessageLoc);
     }
     public boolean errorMessageDisplayed (){
-        return isWebElementDisplayed(openAccountMessageLoc);
+        return isWebElementDisplayed(errorMessageLoc);
     }
 }
