@@ -20,7 +20,7 @@ public class Check {
     }
 
     // Method to perform Assert True
-    public static void checkTrue(boolean b1, String msg) {
+    public static void checkTrue(String msg) {
         Assert.assertTrue(b1, msg);
     }
 
