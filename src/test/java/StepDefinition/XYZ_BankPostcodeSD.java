@@ -9,8 +9,6 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-import static Helper.Check.*;
-
 public class XYZ_BankPostcodeSD {
 
     @Given("^I launch XYZ Bank website$")
@@ -35,6 +33,6 @@ public class XYZ_BankPostcodeSD {
     }
     @Then("^I verify the customer info is displayed in the result list$")
     public void verifyPostCodeDisplayedInSearchResult() {
-        Check.checkTrue("Customer postcode result is as expected");
+
     }
 }
