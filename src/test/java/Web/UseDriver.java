@@ -2,10 +2,12 @@ package Web;
 
 import Helper.DataReader;
 import Helper.Misc;
-import cucumber.api.java.After;
-import cucumber.api.java.Before;
+//import cucumber.api.java.After;
+//import cucumber.api.java.Before;
+import io.cucumber.java.After;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -66,7 +68,10 @@ public class UseDriver {
     //When working in my machine only
     public static void openUrl(String url) {
         System.setProperty("webdriver.chrome.driver" , "Drivers/chromedriver");
-        driver = new ChromeDriver();
+        //Headless Browser should use headless property from Data.properties file
+        ChromeOptions options = new ChromeOptions();
+        options.setHeadless(false);
+        driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
         driver.get(url);
         Misc.sleep(2);
@@ -76,9 +81,13 @@ public class UseDriver {
     // @Before
     public static void openUrl() {
         System.setProperty("webdriver.chrome.driver" , "Drivers/chromedriver");
-        driver = new ChromeDriver();
+        //Headless Browser should use headless property from Data.properties file
+        ChromeOptions options = new ChromeOptions();
+        options.setHeadless(false);
+        driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
         driver.get("https://www.globalsqa.com/angularJs-protractor/BankingProject/");
+        System.out.println(driver.getTitle());
         // Misc.sleep(2);
     }
 

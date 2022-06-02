@@ -69,7 +69,7 @@ public class WebCommands {
 
     public void clickThis(By locator) {
         getElementWithWait(locator).click();
-        Misc.sleep(10);
+        Misc.sleep(3);
     }
 
     public String getAttributeValue(By locator, String attributeName) {
