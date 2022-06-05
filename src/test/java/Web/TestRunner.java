@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
         //Specify Step Definition package name
         glue = {"StepDefinition","Web"},
         //tags to be executed
-        tags = "",
+        tags = "@regression",
         //Creates a default Cucumber report
         plugin = {"pretty","html:target/HTMLReports"}
 )
