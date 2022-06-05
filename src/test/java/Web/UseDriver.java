@@ -73,7 +73,7 @@ public class UseDriver {
     }
 
     //This will start executing before every Scenario
-    // @Before
+    @Before
     public static void openUrl() {
         System.setProperty("webdriver.chrome.driver" , "Drivers/chromedriver");
         driver = new ChromeDriver();
